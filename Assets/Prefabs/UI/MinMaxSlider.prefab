@@ -479,6 +479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7614707940088768877}
   - component: {fileID: 7614707940088768876}
+  - component: {fileID: 1506911104640729852}
   m_Layer: 5
   m_Name: MinMaxSlider
   m_TagString: Untagged
@@ -560,6 +561,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1506911104640729852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7614707940088768878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341caa654dde7694095356071ae03ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextValue: {fileID: 8907715110193304086}
 --- !u!1 &7614707940137032436
 GameObject:
   m_ObjectHideFlags: 0
