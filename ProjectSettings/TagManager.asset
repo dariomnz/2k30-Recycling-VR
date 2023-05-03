@@ -5,16 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - UI
-  - Garbage
+  - Throwable
+  - SlingShot
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Hands
   - Water
   - UI
-  - 
-  - 
+  - SlingShot
+  - Throwable
   - 
   - 
   - 

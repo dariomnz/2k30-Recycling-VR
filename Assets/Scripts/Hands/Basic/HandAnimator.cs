@@ -7,6 +7,7 @@ public class HandAnimator : MonoBehaviour
 {
     public float speed = 5.0f;
     public ActionBasedController Controller = null;
+    public bool IsClosed = false;
 
     private Animator animator = null;
 
@@ -32,8 +33,16 @@ public class HandAnimator : MonoBehaviour
     private void Update()
     {
         // Store input
-        CheckGrip();
-        CheckPointer();
+        if (IsClosed)
+        {
+            SetFingerTargets(gripFingers, 1.0f);
+            SetFingerTargets(pointFingers, 1.0f);
+        }
+        else
+        {
+            CheckGrip();
+            CheckPointer();
+        }
 
         // Smooth input 
         SmoothFinger(gripFingers);
@@ -54,7 +63,6 @@ public class HandAnimator : MonoBehaviour
     private void CheckPointer()
     {
         float pointerValue = Controller.activateActionValue.action.ReadValue<float>();
-        // if (Controller.inputDevice.TryGetFeatureValue(CommonUsages.trigger, out float pointerValue))
         SetFingerTargets(pointFingers, pointerValue);
     }
 
