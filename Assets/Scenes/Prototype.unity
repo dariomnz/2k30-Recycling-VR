@@ -2799,6 +2799,10 @@ MonoBehaviour:
   - {fileID: 6235969745870745997, guid: e25487f42c0fad24f8d06640e0832977, type: 3}
   - {fileID: 6235969745870745997, guid: 044007d634d280f45a2466acab6675ba, type: 3}
   - {fileID: 6235969745870745997, guid: e2839acb1e59ea84a85045ab103729dd, type: 3}
+  - {fileID: 6235969745870745997, guid: 1188be17c82501a4ca784de2788b62ff, type: 3}
+  - {fileID: 6235969745870745997, guid: 016b3da08562c0848a30e416edaffcbe, type: 3}
+  - {fileID: 6235969745870745997, guid: 034866abf359b3b4c87ed104b136ce5d, type: 3}
+  - {fileID: 6235969745870745997, guid: 0ed83264b4a30d94db67e46bcf75c560, type: 3}
   SpawnsPerSecond: 1
 --- !u!4 &1610594045
 Transform:
