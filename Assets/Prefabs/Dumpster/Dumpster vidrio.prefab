@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5718619127936948237}
   m_Layer: 0
-  m_Name: Dumpster organico
+  m_Name: Dumpster vidrio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,11 +27,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1413589008663848747}
+  - {fileID: 5288289529040374614}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &6684061455393865510
+--- !u!1001 &450178004328452955
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -83,21 +83,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5915280985509357570, guid: 68668cf8f037ea04b8e8d2c8b712cffa, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5915280985509357570, guid: 68668cf8f037ea04b8e8d2c8b712cffa, type: 3}
       propertyPath: particlesPrefab
       value: 
-      objectReference: {fileID: 180128, guid: e81eb2c6cf2a8824eb3cb498340abe09, type: 3}
+      objectReference: {fileID: 100748, guid: cd4d7020429cde74db076ffa72495419, type: 3}
     - target: {fileID: 7647922318125556056, guid: 68668cf8f037ea04b8e8d2c8b712cffa, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 39e693fffcb9d984096c0477f1410371, type: 2}
+      objectReference: {fileID: 2100000, guid: cf50cf53d2a78084bac7c0eea9a29921, type: 2}
     - target: {fileID: 8523703105754102895, guid: 68668cf8f037ea04b8e8d2c8b712cffa, type: 3}
       propertyPath: m_Name
       value: Dumpster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68668cf8f037ea04b8e8d2c8b712cffa, type: 3}
---- !u!4 &1413589008663848747 stripped
+--- !u!4 &5288289529040374614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5718619127936948237, guid: 68668cf8f037ea04b8e8d2c8b712cffa, type: 3}
-  m_PrefabInstance: {fileID: 6684061455393865510}
+  m_PrefabInstance: {fileID: 450178004328452955}
   m_PrefabAsset: {fileID: 0}

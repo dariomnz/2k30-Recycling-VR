@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject Spawnable;
+    public float radius = 0.4f;
+    public List<GameObject> Spawnable;
     [SerializeField]
     private float SpawnsPerSecond = 1;
 
@@ -15,7 +16,11 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        var instance = Instantiate(Spawnable, transform.position, Quaternion.identity);
+        GameObject obj = Spawnable[Random.Range(0, Spawnable.Count)];
+        Vector3 randomPos = Random.insideUnitSphere * radius;
+        randomPos += transform.position;
+        var instance = Instantiate(obj, randomPos, Random.rotation);
+
     }
 
     public void ChangeSpawnSpeed(float newSpawnsPerSec)

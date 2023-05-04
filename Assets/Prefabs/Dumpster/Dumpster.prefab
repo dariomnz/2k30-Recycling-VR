@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1883363209693918536
 Transform:
@@ -46,7 +46,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5718619127936948237
 Transform:
@@ -89,7 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71a57d464b8eaf34c9f1c3ffe5848df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   particlesPrefab: {fileID: 0}
+  badParticlesPrefab: {fileID: 180128, guid: 87346053756a96d43990b6e3a08c285e, type: 3}
   particlesPivot: {fileID: 1883363209693918536}
 --- !u!1001 &2018908257700231484
 PrefabInstance:
@@ -154,9 +156,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 243041194690276544, guid: a4fe42c8e702da6438c44b333885fb2f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a4fe42c8e702da6438c44b333885fb2f, type: 3}
       propertyPath: m_Name
       value: Dumpster_fbx
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a4fe42c8e702da6438c44b333885fb2f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229208227961970111, guid: a4fe42c8e702da6438c44b333885fb2f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4fe42c8e702da6438c44b333885fb2f, type: 3}
@@ -186,7 +200,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8201437419870775723, guid: a4fe42c8e702da6438c44b333885fb2f, type: 3}
 --- !u!64 &3947540282183493586

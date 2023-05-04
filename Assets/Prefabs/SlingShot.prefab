@@ -165,8 +165,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0.078896105, y: 1.6441514, z: 2.9331887}
-  - {x: 0.059488386, y: 1.6513166, z: 2.9623287}
+  - {x: 0.082896106, y: 0.082896106, z: 0.011574187}
+  - {x: 0.06348839, y: 0.0788103, z: 0.04130272}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -467,8 +467,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -0.09377805, y: 1.6473356, z: 2.9369733}
-  - {x: -0.06876597, y: 1.6540995, z: 2.9642534}
+  - {x: -0.08977805, y: 0.084460184, z: 0.016266419}
+  - {x: -0.06476597, y: 0.08068719, z: 0.044118058}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66e7e2588205a594387b4bbfd2a5e994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 10
+  force: 15
   SlingShotAim: {fileID: 2918909846661738510}
   HeadInitTransform: {fileID: 8392689654536445610}
 --- !u!1001 &3017217078644207428
@@ -778,10 +778,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!136 &566127398824554919
 CapsuleCollider:
   m_ObjectHideFlags: 0

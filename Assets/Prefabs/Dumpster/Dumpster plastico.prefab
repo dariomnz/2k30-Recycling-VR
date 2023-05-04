@@ -83,6 +83,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5915280985509357570, guid: 68668cf8f037ea04b8e8d2c8b712cffa, type: 3}
+      propertyPath: type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5915280985509357570, guid: 68668cf8f037ea04b8e8d2c8b712cffa, type: 3}
       propertyPath: particlesPrefab
       value: 
       objectReference: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
