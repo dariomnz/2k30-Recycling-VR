@@ -20,6 +20,9 @@ public class SlingShotHead : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (!gameObject.GetComponentInParent<XRGrabInteractable>().isSelected)
+            return;
+
         XRGrabInteractable grabInteractable = other.gameObject.GetComponent<XRGrabInteractable>();
         if (grabInteractable != null && grabInteractable.isSelected)
         {

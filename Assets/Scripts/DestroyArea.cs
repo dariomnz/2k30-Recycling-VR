@@ -5,7 +5,8 @@ using UnityEngine;
 public class DestroyArea : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
-    {   
-        Destroy(other.gameObject);
+    {
+        if (other.gameObject.CompareTag("Garbage"))
+            Destroy(other.gameObject);
     }
 }

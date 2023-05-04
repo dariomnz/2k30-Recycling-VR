@@ -41,7 +41,7 @@ PrefabInstance:
     - target: {fileID: 4322437382097013465, guid: ddef56ce79fba51429568213d2d62444, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 963cfa67e2fd6184abe8bc0b3ff7924a, type: 2}
+      objectReference: {fileID: 2100000, guid: cf50cf53d2a78084bac7c0eea9a29921, type: 2}
     - target: {fileID: 4807476262415196111, guid: ddef56ce79fba51429568213d2d62444, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -89,7 +89,7 @@ PrefabInstance:
     - target: {fileID: 5390691946619723701, guid: ddef56ce79fba51429568213d2d62444, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 963cfa67e2fd6184abe8bc0b3ff7924a, type: 2}
+      objectReference: {fileID: 2100000, guid: cf50cf53d2a78084bac7c0eea9a29921, type: 2}
     - target: {fileID: 5410412581552120705, guid: ddef56ce79fba51429568213d2d62444, type: 3}
       propertyPath: m_Name
       value: TrashBin
@@ -101,7 +101,7 @@ PrefabInstance:
     - target: {fileID: 8994434133847025976, guid: ddef56ce79fba51429568213d2d62444, type: 3}
       propertyPath: particlesPrefab
       value: 
-      objectReference: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
+      objectReference: {fileID: 100748, guid: cd4d7020429cde74db076ffa72495419, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddef56ce79fba51429568213d2d62444, type: 3}
 --- !u!4 &883429578145897160 stripped
