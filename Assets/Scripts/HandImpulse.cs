@@ -24,6 +24,9 @@ public class HandImpulse : MonoBehaviour
     {
         var rigidbody = GetComponent<Rigidbody>();
         if (rigidbody.velocity.magnitude > 1)
+        {
             rigidbody.AddForce(rigidbody.velocity.normalized * Impulse, ForceMode.Impulse);
+            GetComponent<AudioSource>()?.Play();
+        }
     }
 }

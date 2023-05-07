@@ -39,6 +39,8 @@ public class SlingShotHead : MonoBehaviour
         float distance = direction.magnitude;
         rigidbody.AddForce(direction.normalized * distance * force, ForceMode.Impulse);
 
+        GetComponent<AudioSource>()?.Play();
+
         throwable = null;
         transform.position = HeadInitTransform.position;
         transform.rotation = HeadInitTransform.rotation;

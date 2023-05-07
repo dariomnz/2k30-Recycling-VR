@@ -164,8 +164,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0.082896106, y: 0.082896106, z: 0.011574187}
-  - {x: 0.06348839, y: 0.0788103, z: 0.04130272}
+  - {x: -1.42217, y: 0.8988714, z: 2.8401213}
+  - {x: -1.4415777, y: 0.92804193, z: 2.8471613}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -335,10 +335,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4012022075426680500}
   - component: {fileID: 6959153823914940895}
+  - component: {fileID: 2463673906562761635}
   - component: {fileID: 5251149279526510782}
   m_Layer: 0
   m_Name: SlingShot
-  m_TagString: Untagged
+  m_TagString: SlingShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -380,6 +381,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2463673906562761635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5750737135082875555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c158118d96f63c64eabe7b05c6a5f235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlesPrefab: {fileID: 180128, guid: 756e991141c41a64db277625a4435163, type: 3}
 --- !u!114 &5251149279526510782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,8 +663,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -0.08977805, y: 0.084460184, z: 0.016266419}
-  - {x: -0.06476597, y: 0.08068719, z: 0.044118058}
+  - {x: -1.5948441, y: 0.903697, z: 2.839035}
+  - {x: -1.5698321, y: 0.9310312, z: 2.8455763}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -821,6 +835,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlingshotHead_fbx
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1db47ba3b80f238419dc16ba86b56c4e, type: 3}
+      propertyPath: m_TagString
+      value: SlingShot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1db47ba3b80f238419dc16ba86b56c4e, type: 3}
 --- !u!4 &2026680164871876358 stripped
@@ -846,6 +864,102 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.021308595
   m_Center: {x: 0.00036024442, y: 0.0005358222, z: -0.01}
+--- !u!82 &8058486797240827488
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687695870704022972}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &3380592150997138202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +1049,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 653891520bca8c645b8b51e3c61682d0, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 653891520bca8c645b8b51e3c61682d0, type: 3}
+      propertyPath: m_TagString
+      value: SlingShot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653891520bca8c645b8b51e3c61682d0, type: 3}

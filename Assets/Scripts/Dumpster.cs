@@ -6,7 +6,9 @@ public class Dumpster : MonoBehaviour
 {
     public Garbage.GarbageType type = Garbage.GarbageType.None;
     public GameObject particlesPrefab;
+    public AudioSource CorrectSound;
     public GameObject badParticlesPrefab;
+    public AudioSource IncorrectSound;
     public Transform particlesPivot;
 
 
@@ -20,12 +22,16 @@ public class Dumpster : MonoBehaviour
         {
             particle = Instantiate(particlesPrefab, particlesPivot.position, Quaternion.identity);
             ScoreBoard.Instance.UpdateScore(10);
+            CorrectSound.Play();
         }
         else
         {
             particle = Instantiate(badParticlesPrefab, particlesPivot.position, Quaternion.identity);
             ScoreBoard.Instance.UpdateScore(-5);
+            IncorrectSound.Play();
         }
         Destroy(particle, 1);
+        Destroy(other.gameObject, 1);
+
     }
 }
