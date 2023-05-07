@@ -12,12 +12,18 @@ public class ActivateUIRayInteractor : MonoBehaviour, IPointerEnterHandler, IPoi
     public void OnPointerEnter(PointerEventData eventData)
     {
         XRRayInteractor interactor = InputModule.GetInteractor(eventData.pointerId) as XRRayInteractor;
-        interactor.GetComponent<XRInteractorLineVisual>().enabled = true;
+        if (interactor != null)
+        {
+            interactor.GetComponent<XRInteractorLineVisual>().enabled = true;
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         XRRayInteractor interactor = InputModule.GetInteractor(eventData.pointerId) as XRRayInteractor;
-        interactor.GetComponent<XRInteractorLineVisual>().enabled = false;
+        if (interactor != null)
+        {
+            interactor.GetComponent<XRInteractorLineVisual>().enabled = false;
+        }
     }
 }
