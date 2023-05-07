@@ -8,7 +8,7 @@ public class Dumpster : MonoBehaviour
     public GameObject particlesPrefab;
     public GameObject badParticlesPrefab;
     public Transform particlesPivot;
-    
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -17,9 +17,15 @@ public class Dumpster : MonoBehaviour
             return;
         GameObject particle = null;
         if (garbage.garbageType == type)
+        {
             particle = Instantiate(particlesPrefab, particlesPivot.position, Quaternion.identity);
+            ScoreBoard.Instance.UpdateScore(10);
+        }
         else
+        {
             particle = Instantiate(badParticlesPrefab, particlesPivot.position, Quaternion.identity);
+            ScoreBoard.Instance.UpdateScore(-5);
+        }
         Destroy(particle, 1);
     }
 }
