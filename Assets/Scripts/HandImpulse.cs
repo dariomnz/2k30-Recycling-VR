@@ -7,25 +7,30 @@ public class HandImpulse : MonoBehaviour
 {
     public float Impulse = 2f;
     private XRGrabInteractable grabInteractable;
+    private Rigidbody _rigidbody;
+
+    [HideInInspector]
+    public bool IsSlingShot = false;
 
     void Start()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
+        _rigidbody = GetComponent<Rigidbody>();
 
         grabInteractable.selectExited.AddListener(OnReleased);
     }
 
-
     public void OnReleased(SelectExitEventArgs args)
     {
-        Invoke(nameof(ApplyImpulse), 0.05f);
+        if (!IsSlingShot)
+            Invoke(nameof(ApplyImpulse), 0.05f);
     }
+
     void ApplyImpulse()
     {
-        var rigidbody = GetComponent<Rigidbody>();
-        if (rigidbody.velocity.magnitude > 1)
+        if (_rigidbody.velocity.magnitude > 1)
         {
-            rigidbody.AddForce(rigidbody.velocity.normalized * Impulse, ForceMode.Impulse);
+            _rigidbody.AddForce(_rigidbody.velocity.normalized * Impulse, ForceMode.Impulse);
             GetComponent<AudioSource>()?.Play();
         }
     }

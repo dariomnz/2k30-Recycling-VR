@@ -24,31 +24,23 @@ public class ReSpawn : MonoBehaviour
 
     void CheckReSpawn()
     {
-        // foreach (var item in GameObject.FindGameObjectsWithTag("SlingShot"))
-        // {
-        //     Debug.Log(item.ToString());
-        // }
-        // foreach (var item in Physics.OverlapSphere(initPos, 0.5f))
-        // {
-        //     Debug.Log(item.ToString());
-        // }
         Collider[] hitColliders = Physics.OverlapSphere(initPos, 0.5f);
         foreach (var hitCollider in hitColliders)
         {
-            // Debug.Log(hitCollider.CompareTag("SlingShot"));
             if (hitCollider.CompareTag("SlingShot"))
                 return;
         }
 
         if (grabInteractable.isSelected)
             return;
+
         if (_rigidbody.velocity.magnitude < 1)
         {
+            GetComponent<AudioSource>()?.Play();
             var particle = Instantiate(particlesPrefab, transform.position, Quaternion.identity);
             Destroy(particle, 1);
             transform.position = initPos;
             transform.rotation = initRot;
         }
-
     }
 }

@@ -28,12 +28,14 @@ public class SlingShotHead : MonoBehaviour
         {
             throwable = other.gameObject;
             other.gameObject.GetComponent<XRGrabInteractable>()?.selectExited.AddListener(Throw);
+            other.gameObject.GetComponent<HandImpulse>().IsSlingShot = true;
         }
     }
 
     void Throw(SelectExitEventArgs args)
     {
-        args.interactorObject.transform.gameObject.GetComponent<XRGrabInteractable>()?.selectExited.RemoveListener(Throw);
+        args.interactableObject.transform.gameObject.GetComponent<XRGrabInteractable>()?.selectExited.RemoveListener(Throw);
+        args.interactableObject.transform.gameObject.GetComponent<HandImpulse>().IsSlingShot = false;
         Rigidbody rigidbody = args.interactableObject.transform.gameObject.GetComponent<Rigidbody>();
         Vector3 direction = SlingShotAim.position - rigidbody.transform.position;
         float distance = direction.magnitude;

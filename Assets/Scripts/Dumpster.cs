@@ -21,13 +21,13 @@ public class Dumpster : MonoBehaviour
         if (garbage.garbageType == type)
         {
             particle = Instantiate(particlesPrefab, particlesPivot.position, Quaternion.identity);
-            ScoreBoard.Instance.UpdateScore(10);
+            ScoreBoard.Instance.UpdateScore(50);
             CorrectSound.Play();
         }
         else
         {
             particle = Instantiate(badParticlesPrefab, particlesPivot.position, Quaternion.identity);
-            ScoreBoard.Instance.UpdateScore(-5);
+            ScoreBoard.Instance.UpdateScore(-20);
             IncorrectSound.Play();
         }
         Destroy(particle, 1);
