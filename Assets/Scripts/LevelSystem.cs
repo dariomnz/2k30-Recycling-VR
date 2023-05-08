@@ -19,6 +19,10 @@ public class LevelSystem : MonoBehaviour
 
     public GameObject explosionPrefab;
 
+    public GameObject tutorialText0;
+    public GameObject tutorialText1;
+    public GameObject tutorialText2;
+
 
     void Awake()
     {
@@ -43,6 +47,7 @@ public class LevelSystem : MonoBehaviour
             case 0:
                 Dumpsters.SetActive(false);
                 TrashBins.SetActive(true);
+                tutorialText0?.SetActive(true);
                 break;
             case 1:
                 GetComponent<AudioSource>()?.Play();
@@ -55,6 +60,7 @@ public class LevelSystem : MonoBehaviour
                 yield return new WaitForSeconds(1);
                 Dumpsters.SetActive(true);
                 TrashBins.SetActive(false);
+                tutorialText1?.SetActive(true);
                 float prevPos = Dumpsters.transform.position.y;
                 Vector3 pos = Dumpsters.transform.position;
                 pos.y += 10;
@@ -77,6 +83,7 @@ public class LevelSystem : MonoBehaviour
                 TipsSystem.Instance.ChangeTipsActive(false);
                 Dumpsters.SetActive(true);
                 TrashBins.SetActive(true);
+                tutorialText2?.SetActive(true);
                 prevPos = Dumpsters.transform.position.y;
                 pos = Dumpsters.transform.position;
                 pos.y += 10;
@@ -109,6 +116,9 @@ public class LevelSystem : MonoBehaviour
         ScoreBoard.Instance.UpdateScore(-ScoreBoard.Instance.score);
         Dumpsters.SetActive(false);
         TrashBins.SetActive(false);
+        tutorialText0?.SetActive(false);
+        tutorialText1?.SetActive(false);
+        tutorialText2?.SetActive(false);
         GameObject.FindFirstObjectByType<XROrigin>().transform.localPosition = Vector3.zero;
         GameObject.FindFirstObjectByType<XROrigin>().transform.localRotation = Quaternion.identity;
     }
