@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ToogleTips : MonoBehaviour
 {
-
+    
     void Start()
     {
         GetComponent<Toggle>().onValueChanged.AddListener(ChangeTips);

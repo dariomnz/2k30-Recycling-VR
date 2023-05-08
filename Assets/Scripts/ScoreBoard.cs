@@ -9,7 +9,7 @@ public class ScoreBoard : MonoBehaviour
     public static ScoreBoard Instance { get; private set; }
     public List<TextMeshProUGUI> labels;
 
-    private int score = 0;
+    public int score = 0;
 
     void Awake()
     {
@@ -29,7 +29,7 @@ public class ScoreBoard : MonoBehaviour
             score = 9999;
 
         LeanTween.cancel(gameObject);
-        LeanTween.value(gameObject, preScore, score, 0.5f).setOnUpdate(SetText);
+        LeanTween.value(gameObject, preScore, score, 0.5f).setOnUpdate(SetText).setOnComplete(CheckChangeLevel);
     }
 
     void SetText(float val)
@@ -37,5 +37,11 @@ public class ScoreBoard : MonoBehaviour
         string text = val.ToString("0000");
         foreach (var label in labels)
             label.text = text;
+    }
+
+    void CheckChangeLevel()
+    {
+        if (LevelSystem.Instance.CanChangeLevel(score))
+            StartCoroutine(LevelSystem.Instance.NextLevel());
     }
 }
