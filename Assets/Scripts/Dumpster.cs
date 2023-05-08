@@ -10,6 +10,8 @@ public class Dumpster : MonoBehaviour
     public GameObject badParticlesPrefab;
     public AudioSource IncorrectSound;
     public Transform particlesPivot;
+    public DynamicTextData dynamicTextData;
+    public DynamicTextData badDynamicTextData;
 
 
     void OnTriggerEnter(Collider other)
@@ -22,12 +24,14 @@ public class Dumpster : MonoBehaviour
         {
             particle = Instantiate(particlesPrefab, particlesPivot.position, Quaternion.identity);
             ScoreBoard.Instance.UpdateScore(50);
+            DynamicTextManager.CreateText(particlesPivot.position, "50", dynamicTextData);
             CorrectSound.Play();
         }
         else
         {
             particle = Instantiate(badParticlesPrefab, particlesPivot.position, Quaternion.identity);
             ScoreBoard.Instance.UpdateScore(-20);
+            DynamicTextManager.CreateText(particlesPivot.position, "-20", badDynamicTextData);
             IncorrectSound.Play();
         }
         Destroy(particle, 1);

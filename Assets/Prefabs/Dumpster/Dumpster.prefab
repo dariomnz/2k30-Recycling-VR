@@ -517,8 +517,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.49, y: 0.71, z: 0.79}
-  m_Center: {x: 0, y: 0.64, z: 0}
+  m_Size: {x: 1.49, y: 0.4805256, z: 0.79}
+  m_Center: {x: 0, y: 0.5252631, z: 0}
 --- !u!114 &5915280985509357570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +537,8 @@ MonoBehaviour:
   badParticlesPrefab: {fileID: 180128, guid: 87346053756a96d43990b6e3a08c285e, type: 3}
   IncorrectSound: {fileID: 6704700580642154678}
   particlesPivot: {fileID: 1883363209693918536}
+  dynamicTextData: {fileID: 11400000, guid: 7b78e326a655a354883eb6f3a36070e7, type: 2}
+  badDynamicTextData: {fileID: 11400000, guid: 253b29b7d6eb5ee408b8aa8a4ceeeed2, type: 2}
 --- !u!1 &8831128602515571530
 GameObject:
   m_ObjectHideFlags: 0

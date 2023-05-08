@@ -226,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792902148699820149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.528, z: 0}
+  m_LocalPosition: {x: 0, y: 0.696, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4807476262415196111}
@@ -550,6 +550,8 @@ MonoBehaviour:
   badParticlesPrefab: {fileID: 180128, guid: 87346053756a96d43990b6e3a08c285e, type: 3}
   IncorrectSound: {fileID: 7814218766286870373}
   particlesPivot: {fileID: 7822921091606247502}
+  dynamicTextData: {fileID: 11400000, guid: 7b78e326a655a354883eb6f3a36070e7, type: 2}
+  badDynamicTextData: {fileID: 11400000, guid: 253b29b7d6eb5ee408b8aa8a4ceeeed2, type: 2}
 --- !u!65 &3299598155252074843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -561,8 +563,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.39372972, y: 0.6921221, z: 0.43580824}
-  m_Center: {x: 0.0016935319, y: 0.035877347, z: -0.027095884}
+  m_Size: {x: 0.39372972, y: 0.50250155, z: 0.43580824}
+  m_Center: {x: 0.0016935319, y: -0.05893293, z: -0.027095884}
 --- !u!1 &8577072114874587929
 GameObject:
   m_ObjectHideFlags: 0
