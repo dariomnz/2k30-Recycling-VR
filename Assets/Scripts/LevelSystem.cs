@@ -42,6 +42,8 @@ public class LevelSystem : MonoBehaviour
         RestartLevel();
         currentLevel += 1;
         LeanTween.cancel(gameObject);
+        if (currentLevel != 0)
+            yield return new WaitForSeconds(1);
         switch (currentLevel)
         {
             case 0:
@@ -57,9 +59,9 @@ public class LevelSystem : MonoBehaviour
                     particle = Instantiate(explosionPrefab, child.position + (Vector3.up / 2), Quaternion.identity);
                     Destroy(particle, 2);
                 }
-                yield return new WaitForSeconds(1);
                 Dumpsters.SetActive(true);
                 TrashBins.SetActive(false);
+                yield return new WaitForSeconds(1);
                 tutorialText1?.SetActive(true);
                 float prevPos = Dumpsters.transform.position.y;
                 Vector3 pos = Dumpsters.transform.position;
@@ -78,11 +80,11 @@ public class LevelSystem : MonoBehaviour
                     particle = Instantiate(explosionPrefab, child.position + Vector3.up, Quaternion.identity);
                     Destroy(particle, 2);
                 }
-                yield return new WaitForSeconds(1);
                 GameObject.FindFirstObjectByType<ToogleTips>().GetComponent<Toggle>().isOn = false;
                 TipsSystem.Instance.ChangeTipsActive(false);
                 Dumpsters.SetActive(true);
                 TrashBins.SetActive(true);
+                yield return new WaitForSeconds(1);
                 tutorialText2?.SetActive(true);
                 prevPos = Dumpsters.transform.position.y;
                 pos = Dumpsters.transform.position;
@@ -114,12 +116,11 @@ public class LevelSystem : MonoBehaviour
     void RestartLevel()
     {
         ScoreBoard.Instance.UpdateScore(-ScoreBoard.Instance.score);
-        Dumpsters.SetActive(false);
-        TrashBins.SetActive(false);
         tutorialText0?.SetActive(false);
         tutorialText1?.SetActive(false);
         tutorialText2?.SetActive(false);
         GameObject.FindFirstObjectByType<XROrigin>().transform.localPosition = Vector3.zero;
         GameObject.FindFirstObjectByType<XROrigin>().transform.localRotation = Quaternion.identity;
+        GameObject.FindFirstObjectByType<XROrigin>().MatchOriginUpCameraForward(Vector3.up, Vector3.back);
     }
 }

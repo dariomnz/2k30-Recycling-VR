@@ -16,10 +16,18 @@ public class Dumpster : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        GameObject particle = null;
+        if (other.gameObject.name.Contains("SlingshotBase"))
+        {
+            particle = Instantiate(badParticlesPrefab, particlesPivot.position, Quaternion.identity);
+            DynamicTextManager.CreateText(particlesPivot.position + (Vector3.up / 2), "IT'S NOT\n GARBAGE!", badDynamicTextData);
+            IncorrectSound.Play();
+            Destroy(particle, 1);
+            return;
+        }
         Garbage garbage = other.gameObject.GetComponent<Garbage>();
         if (garbage == null)
             return;
-        GameObject particle = null;
         if (garbage.garbageType == type)
         {
             particle = Instantiate(particlesPrefab, particlesPivot.position, Quaternion.identity);
