@@ -43,7 +43,7 @@ public class Dumpster : MonoBehaviour
             IncorrectSound.Play();
         }
         Destroy(particle, 1);
-        Destroy(other.gameObject, 1);
+        Destroy(other.gameObject);
 
     }
 }

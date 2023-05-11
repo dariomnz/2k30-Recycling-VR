@@ -59,9 +59,10 @@ public class LevelSystem : MonoBehaviour
                     particle = Instantiate(explosionPrefab, child.position + (Vector3.up / 2), Quaternion.identity);
                     Destroy(particle, 2);
                 }
-                Dumpsters.SetActive(true);
+                Dumpsters.SetActive(false);
                 TrashBins.SetActive(false);
                 yield return new WaitForSeconds(1);
+                Dumpsters.SetActive(true);
                 tutorialText1?.SetActive(true);
                 float prevPos = Dumpsters.transform.position.y;
                 Vector3 pos = Dumpsters.transform.position;
@@ -82,9 +83,11 @@ public class LevelSystem : MonoBehaviour
                 }
                 GameObject.FindFirstObjectByType<ToogleTips>().GetComponent<Toggle>().isOn = false;
                 TipsSystem.Instance.ChangeTipsActive(false);
+                Dumpsters.SetActive(false);
+                TrashBins.SetActive(false);
+                yield return new WaitForSeconds(1);
                 Dumpsters.SetActive(true);
                 TrashBins.SetActive(true);
-                yield return new WaitForSeconds(1);
                 tutorialText2?.SetActive(true);
                 prevPos = Dumpsters.transform.position.y;
                 pos = Dumpsters.transform.position;
